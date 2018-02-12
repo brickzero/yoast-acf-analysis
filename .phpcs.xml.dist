@@ -25,11 +25,11 @@
 
 	<!--
 	#############################################################################
-	USE THE WordPress RULESET
+	USE THE YoastCS RULESET
 	#############################################################################
 	-->
 
-	<rule ref="WordPress">
+	<rule ref="Yoast">
 		<!-- Catches way too many things, like vars and file headers. -->
 		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
 
@@ -38,15 +38,6 @@
 
 		<!-- Exclude WP filename rules for the time being. YoastCS 0.5 will solve this better. -->
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
-	</rule>
-
-	<rule ref="Squiz.ControlStructures.ControlSignature.SpaceAfterCloseBrace">
-		<exclude-pattern>*/yoast-acf-analysis\.php$</exclude-pattern>
-	</rule>
-
-	<!-- exclude the 'empty' index files from some documentation checks -->
-	<rule ref="Squiz.Commenting.FileComment">
-		<exclude-pattern>*/index.php</exclude-pattern>
 	</rule>
 
 	<rule ref="Squiz.Commenting">
