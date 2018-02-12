@@ -17,7 +17,7 @@
   ],
   "type": "wordpress-plugin",
   "homepage": "https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Thomas Kräftner",
@@ -51,8 +51,9 @@
     "php": ">=5.6.0",
     "brain/monkey": "2.*",
     "phpunit/phpunit": "5.*",
-    "wp-coding-standards/wpcs": "^0.13.1",
-    "roave/security-advisories": "dev-master"
+    "roave/security-advisories": "dev-master",
+    "yoast/yoastcs": "~0.5.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
   },
   "autoload": {
     "classmap": [ "inc" ]
@@ -79,7 +80,7 @@
       "vendor/bin/phpunit --configuration tests/php/phpunit.xml.dist --colors=always"
     ],
     "configure-phpcs": [
-      "\"vendor/bin/phpcs\" --config-set installed_paths ../../../vendor/wp-coding-standards/wpcs"
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
     ],
     "check-cs": [
       "\"vendor/bin/phpcs\""
