@@ -39,9 +39,6 @@
 	<rule ref="Yoast">
 		<!-- Catches way too many things, like vars and file headers. -->
 		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
-
-		<!-- Namespacing hooks sound reasonable. -->
-		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
 	</rule>
 
 	<rule ref="Squiz.Commenting">
@@ -91,6 +88,13 @@
 				<element value="AC_SEO"/>
 				<element value="ysacf"/>
 			</property>
+		</properties>
+	</rule>
+
+	<!-- Allow additional word delimiters for hook names. -->
+	<rule ref="WordPress.NamingConventions.ValidHookName">
+		<properties>
+			<property name="additionalWordDelimiters" value="/"/>
 		</properties>
 	</rule>
 
