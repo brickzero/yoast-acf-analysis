@@ -36,14 +36,7 @@
 	#############################################################################
 	-->
 
-	<rule ref="Yoast">
-		<!-- Catches way too many things, like vars and file headers. -->
-		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
-	</rule>
-
-	<rule ref="Squiz.Commenting">
-		<exclude name="Squiz.Commenting.FileComment.Missing"/>
-	</rule>
+	<rule ref="Yoast"/>
 
 
 	<!--
@@ -135,6 +128,26 @@
 	-->
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound">
 		<exclude-pattern>/tests/php/unit/Dependencies/yoast-seo-dependency-test\.php$</exclude-pattern>
+	</rule>
+
+	<!-- Temporarily exceptions. These should be fixed.
+		 Ticket: https://github.com/Yoast/yoast-acf-analysis/issues/152 -->
+	<rule ref="Generic.Commenting.DocComment.MissingShort">
+		<type>warning</type>
+	</rule>
+
+	<rule ref="Generic.Commenting.DocComment">
+		<!-- This exclusion is related to a PHPCS bug which will be fixed in PHPCS 3.3.1. -->
+		<exclude name="Generic.Commenting.DocComment.SpacingBeforeTags"/>
+	</rule>
+	<rule ref="Squiz.Commenting.ClassComment.Missing">
+		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.Missing">
+		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.VariableComment.Missing">
+		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
 	</rule>
 
 </ruleset>
