@@ -2,17 +2,33 @@
 <ruleset name="Yoast SEO ACF Analysis">
 	<description>Yoast SEO ACF Analysis Coding Standards</description>
 
-	<file>.</file>
+	<!--
+	#############################################################################
+	COMMAND LINE ARGUMENTS
+	https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
+	#############################################################################
+	-->
 
-	<arg name="extensions" value="php"/>
-	<arg value="sp"/>
+	<file>.</file>
 
 	<exclude-pattern>vendor/*</exclude-pattern>
 	<exclude-pattern>tests/*</exclude-pattern>
 	<exclude-pattern>node_modules/*</exclude-pattern>
 	<exclude-pattern>languages/*</exclude-pattern>
 
-	<!-- ##### WordPress sniffs #####-->
+	<!-- Only check PHP files. -->
+	<arg name="extensions" value="php"/>
+
+	<!-- Show progress, show the error codes for each message (source). -->
+	<arg value="ps"/>
+
+
+	<!--
+	#############################################################################
+	USE THE WordPress RULESET
+	#############################################################################
+	-->
+
 	<rule ref="WordPress">
 		<!-- Catches way too many things, like vars and file headers. -->
 		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
