@@ -15,10 +15,10 @@
     <!-- ##### WordPress sniffs #####-->
     <rule ref="WordPress">
         <!-- Catches way too many things, like vars and file headers. -->
-        <exclude name="Generic.Commenting.DocComment.MissingShort" />
+        <exclude name="Generic.Commenting.DocComment.MissingShort"/>
 
         <!-- Namespacing hooks sound reasonable. -->
-        <exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores" />
+        <exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
 
         <!-- Exclude WP filename rules for the time being. YoastCS 0.5 will solve this better. -->
         <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
@@ -34,7 +34,7 @@
     </rule>
 
     <rule ref="Squiz.Commenting">
-        <exclude name="Squiz.Commenting.FileComment.Missing" />
+        <exclude name="Squiz.Commenting.FileComment.Missing"/>
     </rule>
 
 </ruleset>
