@@ -51,4 +51,14 @@
 		<exclude name="Squiz.Commenting.FileComment.Missing"/>
 	</rule>
 
+
+	<!--
+	#############################################################################
+	SNIFF SPECIFIC CONFIGURATION
+	#############################################################################
+	-->
+
+	<!-- Set the minimum supported WP version. This is used by several sniffs. -->
+	<config name="minimum_supported_wp_version" value="4.6"/>
+
 </ruleset>
