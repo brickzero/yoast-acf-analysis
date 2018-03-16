@@ -40,6 +40,8 @@ class Yoast_ACF_Analysis_Configuration {
 	protected $scraper_config = array();
 
 	/**
+	 * Yoast_ACF_Analysis_Configuration constructor.
+	 *
 	 * @param Yoast_ACF_Analysis_String_Store $blacklist_type  Blacklist Type Configuration Object.
 	 * @param Yoast_ACF_Analysis_String_Store $blacklist_name  Blacklist Name Configuration Object.
 	 * @param Yoast_ACF_Analysis_String_Store $field_selectors Field Selectors Configuration Object.
@@ -149,6 +151,8 @@ class Yoast_ACF_Analysis_Configuration {
 	}
 
 	/**
+	 * Is script debug mode enabled ?
+	 *
 	 * @return bool
 	 */
 	public function is_debug() {
@@ -240,6 +244,8 @@ class Yoast_ACF_Analysis_Configuration {
 	}
 
 	/**
+	 * Retrieves an array representation of the current object.
+	 *
 	 * @return array
 	 */
 	public function to_array() {
