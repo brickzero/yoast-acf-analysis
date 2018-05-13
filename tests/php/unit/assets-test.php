@@ -14,6 +14,11 @@ class Assets_Test extends \PHPUnit_Framework_TestCase {
 		Monkey\setUp();
 	}
 
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
+
 	public function testInitHook() {
 		define( 'AC_SEO_ACF_ANALYSIS_PLUGIN_FILE', '/directory/file' );
 		Functions\expect( 'get_plugin_data' )
@@ -29,10 +34,5 @@ class Assets_Test extends \PHPUnit_Framework_TestCase {
 		$testee->init();
 
 		$this->assertTrue( has_filter( 'admin_enqueue_scripts', array( $testee, 'enqueue_scripts' ) ) );
-	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
 	}
 }

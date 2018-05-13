@@ -55,6 +55,11 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 		Functions\expect( 'current_user_can' )->andReturn( true );
 	}
 
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
+
 	public function testNoDependencies() {
 		$testee = new \Yoast_ACF_Analysis_Requirements();
 		$this->assertTrue( $testee->are_met() );
@@ -81,10 +86,4 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 
 		$this->assertFalse( $testee->are_met() );
 	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
-	}
-
 }

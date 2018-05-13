@@ -13,6 +13,11 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 		Monkey\setUp();
 	}
 
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
+
 	public function testFail() {
 		$testee = new \Yoast_ACF_Analysis_Dependency_Yoast_SEO();
 
@@ -47,10 +52,5 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 		$testee->register_notifications();
 
 		$this->assertTrue( has_action( 'admin_notices', array( $testee, 'message_minimum_version' ) ) );
-	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
 	}
 }

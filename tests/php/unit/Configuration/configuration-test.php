@@ -13,6 +13,11 @@ class Configuration_Test extends \PHPUnit_Framework_TestCase {
 		Monkey\setUp();
 	}
 
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
+
 	public function testEmpty() {
 
 		$configuration = new \Yoast_ACF_Analysis_Configuration(
@@ -288,10 +293,5 @@ class Configuration_Test extends \PHPUnit_Framework_TestCase {
 
 		$this->assertSame( $store, $configuration->get_field_selectors() );
 
-	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
 	}
 }

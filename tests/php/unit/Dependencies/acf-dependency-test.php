@@ -10,6 +10,11 @@ class ACF_Dependency_Test extends \PHPUnit_Framework_TestCase {
 		Monkey\setUp();
 	}
 
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
+
 	public function testNoACFClassExists() {
 		$testee = new \Yoast_ACF_Analysis_Dependency_ACF();
 
@@ -29,10 +34,5 @@ class ACF_Dependency_Test extends \PHPUnit_Framework_TestCase {
 		$testee->register_notifications();
 
 		$this->assertTrue( has_action( 'admin_notices', array( $testee, 'message_plugin_not_activated' ) ) );
-	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
 	}
 }

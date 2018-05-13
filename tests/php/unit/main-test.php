@@ -11,6 +11,11 @@ class Main_Test extends \PHPUnit_Framework_TestCase {
 		Monkey\setUp();
 	}
 
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
+
 	public function testInvalidConfig() {
 		$registry = \Yoast_ACF_Analysis_Facade::get_registry();
 
@@ -22,10 +27,5 @@ class Main_Test extends \PHPUnit_Framework_TestCase {
 		$this->assertNotSame( 'Invalid Config', $registry->get( 'config' ) );
 		$this->assertInstanceOf( \Yoast_ACF_Analysis_Configuration::class, $registry->get( 'config' ) );
 
-	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
 	}
 }
