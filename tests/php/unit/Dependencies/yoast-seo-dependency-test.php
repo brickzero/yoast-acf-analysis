@@ -8,11 +8,17 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	protected $preserveGlobalState      = false;
 	protected $runTestInSeparateProcess = true;
 
+	/**
+	 * Set up test fixtures.
+	 */
 	protected function setUp() {
 		parent::setUp();
 		Monkey\setUp();
 	}
 
+	/**
+	 * Tear down test fixtures previously setup.
+	 */
 	protected function tearDown() {
 		Monkey\tearDown();
 		parent::tearDown();

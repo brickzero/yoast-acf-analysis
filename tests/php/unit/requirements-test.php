@@ -48,6 +48,9 @@ class Failing_Dependency implements \Yoast_ACF_Analysis_Dependency {
 
 class Requirements_Test extends \PHPUnit_Framework_TestCase {
 
+	/**
+	 * Set up test fixtures.
+	 */
 	protected function setUp() {
 		parent::setUp();
 		Monkey\setUp();
@@ -55,6 +58,9 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 		Functions\expect( 'current_user_can' )->andReturn( true );
 	}
 
+	/**
+	 * Tear down test fixtures previously setup.
+	 */
 	protected function tearDown() {
 		Monkey\tearDown();
 		parent::tearDown();
