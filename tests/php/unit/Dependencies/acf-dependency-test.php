@@ -4,7 +4,7 @@ namespace Yoast\AcfAnalysis\Tests\Dependencies;
 
 use Brain\Monkey;
 
-class ACFDependencyTest extends \PHPUnit_Framework_TestCase {
+class ACF_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	protected function setUp() {
 		parent::setUp();
 		Monkey\setUp();
@@ -19,7 +19,7 @@ class ACFDependencyTest extends \PHPUnit_Framework_TestCase {
 	public function testACFClassExists() {
 		$testee = new \Yoast_ACF_Analysis_Dependency_ACF();
 
-		require_once __DIR__ . DIRECTORY_SEPARATOR . 'ACFClass.php';
+		require_once __DIR__ . DIRECTORY_SEPARATOR . 'acf.php';
 
 		$this->assertTrue( $testee->is_met() );
 	}
