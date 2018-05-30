@@ -151,9 +151,9 @@ class Yoast_ACF_Analysis_Configuration {
 	}
 
 	/**
-	 * Is script debug mode enabled ?
+	 * Determines if debug mode is enabled.
 	 *
-	 * @return bool
+	 * @return bool True if debug mode is enabled. False otherwise.
 	 */
 	public function is_debug() {
 		return ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG === true );
