@@ -18,6 +18,8 @@ class Yoast_ACF_Analysis_Registry {
 	private $storage = array();
 
 	/**
+	 * Adds an item to the registry.
+	 *
 	 * @param string|int $id   Registry index.
 	 * @param mixed      $item Item to store in the registry.
 	 */
@@ -26,6 +28,8 @@ class Yoast_ACF_Analysis_Registry {
 	}
 
 	/**
+	 * Retrieves an item from the registry.
+	 *
 	 * @param string|int $id Registry index.
 	 *
 	 * @return object|null Object if a class is registered for the ID, otherwise null.
