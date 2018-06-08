@@ -8,9 +8,20 @@ use Brain\Monkey\Functions;
 
 class Configuration_Test extends \PHPUnit_Framework_TestCase {
 
+	/**
+	 * Set up test fixtures.
+	 */
 	protected function setUp() {
 		parent::setUp();
 		Monkey\setUp();
+	}
+
+	/**
+	 * Tear down test fixtures previously setup.
+	 */
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
 	}
 
 	public function testEmpty() {
@@ -288,10 +299,5 @@ class Configuration_Test extends \PHPUnit_Framework_TestCase {
 
 		$this->assertSame( $store, $configuration->get_field_selectors() );
 
-	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
 	}
 }

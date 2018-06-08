@@ -11,11 +11,22 @@ use Yoast\AcfAnalysis\Tests\Doubles\Failing_Dependency;
 
 class Requirements_Test extends \PHPUnit_Framework_TestCase {
 
+	/**
+	 * Set up test fixtures.
+	 */
 	protected function setUp() {
 		parent::setUp();
 		Monkey\setUp();
 
 		Functions\expect( 'current_user_can' )->andReturn( true );
+	}
+
+	/**
+	 * Tear down test fixtures previously setup.
+	 */
+	protected function tearDown() {
+		Monkey\tearDown();
+		parent::tearDown();
 	}
 
 	public function testNoDependencies() {
@@ -44,10 +55,4 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 
 		$this->assertFalse( $testee->are_met() );
 	}
-
-	protected function tearDown() {
-		Monkey\tearDown();
-		parent::tearDown();
-	}
-
 }
