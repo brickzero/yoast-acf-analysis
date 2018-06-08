@@ -6,45 +6,8 @@ namespace Yoast\AcfAnalysis\Tests\Configuration;
 use Brain\Monkey;
 use Brain\Monkey\Functions;
 use Brain\Monkey\Filters;
-
-
-class Passing_Dependency implements \Yoast_ACF_Analysis_Dependency {
-	/**
-	 * Checks if this dependency is met.
-	 *
-	 * @return bool True when met, False when not met.
-	 */
-	public function is_met() {
-		return true;
-	}
-
-	/**
-	 * Registers the notifications to communicate the depedency is not met.
-	 *
-	 * @return void
-	 */
-	public function register_notifications() {
-	}
-}
-
-class Failing_Dependency implements \Yoast_ACF_Analysis_Dependency {
-	/**
-	 * Checks if this dependency is met.
-	 *
-	 * @return bool True when met, False when not met.
-	 */
-	public function is_met() {
-		return false;
-	}
-
-	/**
-	 * Registers the notifications to communicate the depedency is not met.
-	 *
-	 * @return void
-	 */
-	public function register_notifications() {
-	}
-}
+use Yoast\AcfAnalysis\Tests\Doubles\Passing_Dependency;
+use Yoast\AcfAnalysis\Tests\Doubles\Failing_Dependency;
 
 class Requirements_Test extends \PHPUnit_Framework_TestCase {
 
