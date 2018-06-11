@@ -42,9 +42,6 @@
 
 		<!-- Namespacing hooks sound reasonable. -->
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
-
-		<!-- Exclude WP filename rules for the time being. YoastCS 0.5 will solve this better. -->
-		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 	</rule>
 
 	<rule ref="Squiz.Commenting">
@@ -66,6 +63,20 @@
 		<properties>
 			<property name="text_domain" type="array">
 				<element value="acf-content-analysis-for-yoast-seo"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="Yoast.Files.FileName">
+		<properties>
+			<!-- Don't trigger on the main file as renaming it would deactivate the plugin. -->
+			<property name="exclude" type="array">
+				<element value="yoast-acf-analysis.php"/>
+			</property>
+
+			<!-- Remove the following prefixes from the names of object structures. -->
+			<property name="prefixes" type="array">
+				<element value="Yoast_ACF_Analysis"/>
 			</property>
 		</properties>
 	</rule>
