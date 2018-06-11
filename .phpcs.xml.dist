@@ -121,4 +121,20 @@
 		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
 	</rule>
 
+
+	<!--
+	#############################################################################
+	TEMPORARY ADJUSTMENTS
+	Adjustments which should be removed once the associated issue has been resolved.
+	#############################################################################
+	-->
+
+	<!-- Temporarily excluded due to a bug in WPCS.
+		 The bug has been addressed and will be fixed in WPCS 1.0.0.
+		 WPCS PR: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/pull/1356
+	-->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound">
+		<exclude-pattern>/tests/php/unit/Dependencies/yoast-seo-dependency-test\.php$</exclude-pattern>
+	</rule>
+
 </ruleset>
