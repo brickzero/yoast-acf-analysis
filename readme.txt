@@ -1,11 +1,11 @@
 === ACF Content Analysis for Yoast SEO ===
 Contributors: yoast, angrycreative, kraftner, marcusforsberg, viktorfroberg, joostdevalk, atimmer, jipmoors, theorboman
 Tags: Yoast, SEO, ACF, Advanced Custom Fields, analysis, Search Engine Optimization
-Requires at least: 4.6
-Tested up to: 4.9.6
+Requires at least: 4.8
+Tested up to: 4.9.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
-Stable tag: 2.0.1
+Stable tag: 2.1.0
 Requires PHP: 5.2.4
 
 WordPress plugin that adds the content of all ACF fields to the Yoast SEO score analysis.
