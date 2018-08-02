@@ -99,7 +99,6 @@ class Yoast_ACF_Analysis_Configuration {
 		}
 
 		return $this->blacklist_type;
-
 	}
 
 	/**

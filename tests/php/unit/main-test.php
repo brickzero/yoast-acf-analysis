@@ -32,6 +32,5 @@ class Main_Test extends \PHPUnit_Framework_TestCase {
 
 		$this->assertNotSame( 'Invalid Config', $registry->get( 'config' ) );
 		$this->assertInstanceOf( \Yoast_ACF_Analysis_Configuration::class, $registry->get( 'config' ) );
-
 	}
 }

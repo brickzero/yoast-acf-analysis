@@ -81,7 +81,6 @@ class Configuration_Test extends \PHPUnit_Framework_TestCase {
 			->andReturn( $blacklist_type2 );
 
 		$this->assertSame( $blacklist_type2, $configuration->get_blacklist_type() );
-
 	}
 
 	public function testBlacklistTypeFilterInvalid() {
@@ -298,6 +297,5 @@ class Configuration_Test extends \PHPUnit_Framework_TestCase {
 			->andReturn( '' );
 
 		$this->assertSame( $store, $configuration->get_field_selectors() );
-
 	}
 }
