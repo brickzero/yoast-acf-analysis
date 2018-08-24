@@ -72,5 +72,4 @@ class Yoast_ACF_Analysis_String_Store {
 	public function to_array() {
 		return $this->items;
 	}
-
 }

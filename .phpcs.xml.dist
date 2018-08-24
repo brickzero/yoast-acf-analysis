@@ -122,23 +122,10 @@
 	#############################################################################
 	-->
 
-	<!-- Temporarily excluded due to a bug in WPCS.
-		 The bug has been addressed and will be fixed in WPCS 1.0.0.
-		 WPCS PR: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/pull/1356
-	-->
-	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound">
-		<exclude-pattern>/tests/php/unit/Dependencies/yoast-seo-dependency-test\.php$</exclude-pattern>
-	</rule>
-
 	<!-- Temporarily exceptions. These should be fixed.
 		 Ticket: https://github.com/Yoast/yoast-acf-analysis/issues/152 -->
 	<rule ref="Generic.Commenting.DocComment.MissingShort">
 		<type>warning</type>
-	</rule>
-
-	<rule ref="Generic.Commenting.DocComment">
-		<!-- This exclusion is related to a PHPCS bug which will be fixed in PHPCS 3.3.1. -->
-		<exclude name="Generic.Commenting.DocComment.SpacingBeforeTags"/>
 	</rule>
 	<rule ref="Squiz.Commenting.ClassComment.Missing">
 		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>

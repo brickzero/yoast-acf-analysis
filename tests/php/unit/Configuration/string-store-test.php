@@ -25,7 +25,6 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 		$store->add( $type );
 
 		$this->assertSame( [ $type ], $store->to_array() );
-
 	}
 
 	public function testAddSame() {
@@ -37,7 +36,6 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 		$store->add( $type );
 
 		$this->assertSame( [ $type ], $store->to_array() );
-
 	}
 
 	public function testAddMultiple() {
@@ -50,7 +48,6 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 		$store->add( $type_b );
 
 		$this->assertSame( [ $type_a, $type_b ], $store->to_array() );
-
 	}
 
 	public function testAddMultipleSorting() {
@@ -63,7 +60,6 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 		$store->add( $type_b );
 
 		$this->assertSame( [ $type_b, $type_a ], $store->to_array() );
-
 	}
 
 	public function testAddNonString() {
@@ -72,7 +68,6 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 
 		$this->assertFalse( $store->add( 999 ) );
 		$this->assertEmpty( $store->to_array() );
-
 	}
 
 	public function testRemove() {
@@ -94,7 +89,6 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 		$store->remove( $type_b );
 
 		$this->assertEmpty( $store->to_array() );
-
 	}
 
 	public function testRemoveNonString() {
@@ -103,7 +97,6 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 		$store->add( '999' );
 
 		$this->assertFalse( $store->remove( 999 ) );
-
 	}
 
 	public function testRemoveNonExist() {
@@ -111,7 +104,5 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 		$store = $this->getStore();
 
 		$this->assertFalse( $store->remove( 'test' ) );
-
 	}
-
 }

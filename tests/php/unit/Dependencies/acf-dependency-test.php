@@ -5,6 +5,7 @@ namespace Yoast\AcfAnalysis\Tests\Dependencies;
 use Brain\Monkey;
 
 class ACF_Dependency_Test extends \PHPUnit_Framework_TestCase {
+
 	/**
 	 * Set up test fixtures.
 	 */

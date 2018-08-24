@@ -3,6 +3,7 @@
 namespace Yoast\AcfAnalysis\Tests\Doubles;
 
 class Passing_Dependency implements \Yoast_ACF_Analysis_Dependency {
+
 	/**
 	 * Checks if this dependency is met.
 	 *

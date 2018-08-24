@@ -22,7 +22,6 @@ class Registry_Test extends \PHPUnit_Framework_TestCase {
 		);
 
 		$this->assertSame( $first, $second );
-
 	}
 
 	public function testAdd() {
@@ -37,7 +36,5 @@ class Registry_Test extends \PHPUnit_Framework_TestCase {
 		$registry->add( $id, $content );
 
 		$this->assertSame( $content, $registry->get( $id ) );
-
 	}
-
 }
