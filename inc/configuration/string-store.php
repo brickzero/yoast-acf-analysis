@@ -54,11 +54,9 @@ class Yoast_ACF_Analysis_String_Store {
 		if ( ! in_array( $item, $this->items, true ) ) {
 			return false;
 		}
-		$this->items = array_values(
-			array_diff(
-				$this->items, array( $item )
-			)
-		);
+
+		$items       = array_diff( $this->items, array( $item ) );
+		$this->items = array_values( $items );
 		sort( $this->items );
 
 		return true;
