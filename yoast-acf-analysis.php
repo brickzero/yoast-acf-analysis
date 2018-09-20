@@ -39,15 +39,6 @@ if ( is_file( AC_SEO_ACF_ANALYSIS_PLUGIN_PATH . $yoast_acf_autoload_file ) ) {
 }
 
 /**
- * Loads translations.
- *
- * @deprecated 2.0.1
- */
-function yoast_acf_analysis_load_textdomain() {
-	// As we require WordPress 4.6 and higher, we don't need to load the translation files manually anymore.
-}
-
-/**
  * Triggers a message whenever the class is missing.
  */
 if ( ! class_exists( 'AC_Yoast_SEO_ACF_Content_Analysis' ) ) {
@@ -69,4 +60,16 @@ function yoast_acf_report_missing_acf() {
 		'ACF Content Analysis for Yoast SEO'
 	);
 	echo '</p></div>';
+}
+
+/* ********************* DEPRECATED FUNCTIONS ********************* */
+
+/**
+ * Loads translations.
+ *
+ * @deprecated 2.0.1
+ * @codeCoverageIgnore
+ */
+function yoast_acf_analysis_load_textdomain() {
+	// As we require WordPress 4.6 and higher, we don't need to load the translation files manually anymore.
 }
