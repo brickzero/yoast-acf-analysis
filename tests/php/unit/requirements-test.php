@@ -11,8 +11,6 @@ use Yoast\AcfAnalysis\Tests\Doubles\Failing_Dependency;
 
 /**
  * Class Requirements_Test
- *
- * @package Yoast\AcfAnalysis\Tests\Configuration
  */
 class Requirements_Test extends \PHPUnit_Framework_TestCase {
 
@@ -27,7 +25,7 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tears down test fixtures previously setup.
+	 * Tears down test fixtures previously set up.
 	 */
 	protected function tearDown() {
 		Monkey\tearDown();
@@ -45,7 +43,7 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the situation where a valid dependency is added.
+	 * Tests that requirements are met when a valid dependency is added.
 	 *
 	 * @return void
 	 */
@@ -57,7 +55,7 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the situation where an invalid dependency is added.
+	 * Tests that requirements are not met when an invalid dependency is added.
 	 *
 	 * @return void
 	 */
@@ -69,7 +67,7 @@ class Requirements_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the situation where a mix of valid and invalid dependencies are added.
+	 * Tests that requirements are not met when a mix of valid and invalid dependencies are added.
 	 *
 	 * @return void
 	 */

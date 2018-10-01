@@ -8,8 +8,6 @@ use Brain\Monkey\Functions;
 
 /**
  * Class Configuration_Test
- *
- * @package Yoast\AcfAnalysis\Tests\Configuration
  */
 class Configuration_Test extends \PHPUnit_Framework_TestCase {
 

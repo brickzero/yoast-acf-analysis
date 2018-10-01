@@ -7,8 +7,6 @@ use Brain\Monkey\Functions;
 
 /**
  * Class Assets_Test
- *
- * @package Yoast\AcfAnalysis\Tests\Assets
  */
 class Assets_Test extends \PHPUnit_Framework_TestCase {
 
@@ -20,7 +18,7 @@ class Assets_Test extends \PHPUnit_Framework_TestCase {
 	protected $preserveGlobalState = false;
 
 	/**
-	 * Whether or not to run the test in a separate process.
+	 * Whether or not to run each test in a separate process.
 	 *
 	 * @var bool
 	 */
@@ -47,7 +45,7 @@ class Assets_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Test the init hook.
+	 * Test the init hook and determines whether the proper assets are loaded.
 	 *
 	 * @return void
 	 */

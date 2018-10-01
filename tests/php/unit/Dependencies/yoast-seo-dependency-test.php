@@ -5,9 +5,7 @@ namespace Yoast\AcfAnalysis\Tests\Dependencies;
 use Brain\Monkey;
 
 /**
- * Class Yoast_SEO_Dependency_Test
- *
- * @package Yoast\AcfAnalysis\Tests\Dependencies
+ * Class Yoast_SEO_Dependency_Test*
  */
 class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 
@@ -19,7 +17,7 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	protected $preserveGlobalState = false;
 
 	/**
-	 * Whether or not to run the test in a separate process.
+	 * Whether or not to run each test in a separate process.
 	 *
 	 * @var bool
 	 */
@@ -46,7 +44,7 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the scenario where dependency can't be found.
+	 * Tests that requirements are not met when Yoast SEO can't be found.
 	 *
 	 * @return void
 	 */
@@ -57,7 +55,7 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the scenario where dependency can be found.
+	 * Tests that requirements are met when Yoast SEO can be found, based on the existence of a version number.
 	 *
 	 * @return void
 	 */
@@ -69,7 +67,7 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the scenario where an old version of the dependency isn't compatible.
+	 * Tests that requirements are not met when an old and incompatible version Yoast SEO is installed.
 	 *
 	 * @return void
 	 */
@@ -81,7 +79,7 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the admin notice.
+	 * Tests the appearance of the admin notice when requirements are not met.
 	 *
 	 * @return void
 	 */
@@ -93,7 +91,7 @@ class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the admin notice regarding the minimum version.
+	 * Tests the appearance of the admin notice when minimum version requirements are not met.
 	 *
 	 * @return void
 	 */

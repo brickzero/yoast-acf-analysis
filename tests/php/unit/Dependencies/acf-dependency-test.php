@@ -6,8 +6,6 @@ use Brain\Monkey;
 
 /**
  * Class ACF_Dependency_Test
- *
- * @package Yoast\AcfAnalysis\Tests\Dependencies
  */
 class ACF_Dependency_Test extends \PHPUnit_Framework_TestCase {
 

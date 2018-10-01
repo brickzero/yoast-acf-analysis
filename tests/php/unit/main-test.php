@@ -6,8 +6,6 @@ use Brain\Monkey;
 
 /**
  * Class Main_Test
- *
- * @package Yoast\AcfAnalysis\Tests
  */
 class Main_Test extends \PHPUnit_Framework_TestCase {
 

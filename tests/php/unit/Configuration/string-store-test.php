@@ -5,8 +5,6 @@ namespace Yoast\AcfAnalysis\Tests\Configuration;
 
 /**
  * Class String_Store_Test
- *
- * @package Yoast\AcfAnalysis\Tests\Configuration
  */
 class String_Store_Test extends \PHPUnit_Framework_TestCase {
 
@@ -45,7 +43,7 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests adding a type to the store twice.
+	 * Tests that when attempting to add a duplicate item to the store, it gets ignored.
 	 *
 	 * @return void
 	 */
@@ -61,7 +59,7 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests adding multiple types to the store.
+	 * Tests successfully adding multiple, unique types to the store.
 	 *
 	 * @return void
 	 */
@@ -78,7 +76,7 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the sorting of types in the store.
+	 * Tests the sorting (in an alphabetical order) of types in the store, regardless of when they were added.
 	 *
 	 * @return void
 	 */
@@ -95,7 +93,7 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests adding a non-string type to the store.
+	 * Tests adding a non-string type to the store, which is considered invalid and thus shouldn't be stored.
 	 *
 	 * @return void
 	 */
@@ -108,7 +106,7 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests removing a type from the store.
+	 * Tests removing an existing type from the store.
 	 *
 	 * @return void
 	 */
@@ -134,7 +132,7 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests removing a non-string type from the store.
+	 * Tests that non-string type items don't get removed, as they can't be added to begin with.
 	 *
 	 * @return void
 	 */
@@ -147,7 +145,7 @@ class String_Store_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests removing a non-existent type from the store.
+	 * Tests removing a non-existent type from the store, resulting in an unsuccessful removal.
 	 *
 	 * @return void
 	 */

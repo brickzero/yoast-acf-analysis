@@ -225,7 +225,7 @@ class AC_Yoast_SEO_ACF_Content_Analysis {
 	/**
 	 * Gets a new string store.
 	 *
-	 * @return Yoast_ACF_Analysis_String_Store The new blacklist string store.
+	 * @return Yoast_ACF_Analysis_String_Store A new blacklist string store.
 	 */
 	protected function get_blacklist_name() {
 		return new Yoast_ACF_Analysis_String_Store();

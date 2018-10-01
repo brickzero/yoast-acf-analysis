@@ -25,7 +25,7 @@ class Yoast_ACF_Analysis_Configuration {
 	protected $blacklist_name;
 
 	/**
-	 * The field selectors.
+	 * The field selectors for usage in ACF4.
 	 *
 	 * @var Yoast_ACF_Analysis_String_Store
 	 */

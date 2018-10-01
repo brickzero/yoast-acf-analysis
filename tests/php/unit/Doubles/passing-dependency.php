@@ -4,8 +4,6 @@ namespace Yoast\AcfAnalysis\Tests\Doubles;
 
 /**
  * Class Passing_Dependency
- *
- * @package Yoast\AcfAnalysis\Tests\Doubles
  */
 class Passing_Dependency implements \Yoast_ACF_Analysis_Dependency {
 
