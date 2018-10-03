@@ -4,10 +4,15 @@ namespace Yoast\AcfAnalysis\Tests;
 
 use Brain\Monkey;
 
+/**
+ * Class Main_Test
+ */
 class Main_Test extends \PHPUnit_Framework_TestCase {
 
 	/**
-	 * Set up test fixtures.
+	 * Sets up test fixtures.
+	 *
+	 * @return void
 	 */
 	protected function setUp() {
 		parent::setUp();
@@ -15,13 +20,20 @@ class Main_Test extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tear down test fixtures previously setup.
+	 * Tears down test fixtures previously setup.
+	 *
+	 * @return void
 	 */
 	protected function tearDown() {
 		Monkey\tearDown();
 		parent::tearDown();
 	}
 
+	/**
+	 * Tests invalid configurations.
+	 *
+	 * @return void
+	 */
 	public function testInvalidConfig() {
 		$registry = \Yoast_ACF_Analysis_Facade::get_registry();
 

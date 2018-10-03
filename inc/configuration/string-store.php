@@ -44,7 +44,7 @@ class Yoast_ACF_Analysis_String_Store {
 	 *
 	 * @param string $item Item to remove from the store.
 	 *
-	 * @return bool True if the item was added, False if it failed.
+	 * @return bool True if the item was removed, false if it failed.
 	 */
 	public function remove( $item ) {
 		if ( ! is_string( $item ) ) {

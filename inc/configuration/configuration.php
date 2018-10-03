@@ -11,16 +11,22 @@
 class Yoast_ACF_Analysis_Configuration {
 
 	/**
+	 * The blacklist type.
+	 *
 	 * @var Yoast_ACF_Analysis_String_Store
 	 */
 	protected $blacklist_type;
 
 	/**
+	 * The blacklist's name.
+	 *
 	 * @var Yoast_ACF_Analysis_String_Store
 	 */
 	protected $blacklist_name;
 
 	/**
+	 * The field selectors for usage in ACF4.
+	 *
 	 * @var Yoast_ACF_Analysis_String_Store
 	 */
 	protected $field_selectors;
