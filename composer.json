@@ -59,9 +59,8 @@
     "classmap": [ "inc" ]
   },
   "autoload-dev": {
-    "psr-4": {
-      "Yoast\\AcfAnalysis\\Tests\\": "tests/php/unit"
-    },
+    "classmap": [ "tests/php/unit" ],
+    "exclude-from-classmap": ["/tests/php/unit/Dependencies/acf.php"],
     "files": [
       "tests/js/system/data/test-data-loader-functions.php"
     ]
