@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Yoast\AcfAnalysis\Tests\Configuration;
 
 /**

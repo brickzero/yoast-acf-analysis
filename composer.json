@@ -52,8 +52,7 @@
     "brain/monkey": "2.*",
     "phpunit/phpunit": "5.*",
     "roave/security-advisories": "dev-master",
-    "yoast/yoastcs": "^1.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+    "yoast/yoastcs": "^1.1.0"
   },
   "autoload": {
     "classmap": [ "inc" ]
@@ -82,8 +81,8 @@
       "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
     ],
     "check-cs": [
-      "\"vendor/bin/phpcs\" --ignore=./tests --runtime-set ignore_warnings_on_exit 1",
-      "\"vendor/bin/phpcs\" ./tests/ --runtime-set testVersion 5.6- --runtime-set ignore_warnings_on_exit 1"
+      "\"vendor/bin/phpcs\" --ignore=./tests",
+      "\"vendor/bin/phpcs\" ./tests/ --runtime-set testVersion 5.6-"
     ],
     "check-cs-errors": [
       "@check-cs"

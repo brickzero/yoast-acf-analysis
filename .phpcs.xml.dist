@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<ruleset name="Yoast SEO ACF Analysis">
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Yoast SEO ACF Analysis"
+    xsi:noNamespaceSchemaLocation="./vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
 	<description>Yoast SEO ACF Analysis Coding Standards</description>
 
 	<!--
@@ -111,29 +114,6 @@
 
 	<!-- Valid exemption: namespaced files do not need a file docblock in the Yoast repos. -->
 	<rule ref="Squiz.Commenting.FileComment.Missing">
-		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
-	</rule>
-
-
-	<!--
-	#############################################################################
-	TEMPORARY ADJUSTMENTS
-	Adjustments which should be removed once the associated issue has been resolved.
-	#############################################################################
-	-->
-
-	<!-- Temporarily exceptions. These should be fixed.
-		 Ticket: https://github.com/Yoast/yoast-acf-analysis/issues/152 -->
-	<rule ref="Generic.Commenting.DocComment.MissingShort">
-		<type>warning</type>
-	</rule>
-	<rule ref="Squiz.Commenting.ClassComment.Missing">
-		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
-	</rule>
-	<rule ref="Squiz.Commenting.FunctionComment.Missing">
-		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
-	</rule>
-	<rule ref="Squiz.Commenting.VariableComment.Missing">
 		<exclude-pattern>/tests/php/unit/*\.php$</exclude-pattern>
 	</rule>
 
