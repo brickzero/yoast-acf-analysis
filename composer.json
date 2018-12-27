@@ -44,6 +44,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
+    "php": ">=5.2",
     "composer/installers": "~1.0",
     "xrstf/composer-php52": "1.*"
   },
@@ -75,20 +76,24 @@
       "xrstf\\Composer52\\Generator::onPostInstallCmd"
     ],
     "test": [
-      "vendor/bin/phpunit --colors=always"
+      "@php ./vendor/phpunit/phpunit/phpunit --colors=always"
     ],
     "configure-phpcs": [
-      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+      "@config-yoastcs"
+    ],
+    "config-yoastcs": [
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+      "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --config-set default_standard Yoast"
     ],
     "check-cs": [
-      "\"vendor/bin/phpcs\" --ignore=./tests",
-      "\"vendor/bin/phpcs\" ./tests/ --runtime-set testVersion 5.6-"
+      "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --ignore=./tests",
+      "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs ./tests/ --runtime-set testVersion 5.6-"
     ],
     "check-cs-errors": [
       "@check-cs"
     ],
     "fix-cs": [
-      "\"vendor/bin/phpcbf\""
+      "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
     ]
   }
 }
