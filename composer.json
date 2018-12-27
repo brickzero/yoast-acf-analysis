@@ -75,7 +75,7 @@
       "xrstf\\Composer52\\Generator::onPostInstallCmd"
     ],
     "test": [
-      "vendor/bin/phpunit --configuration tests/php/phpunit.xml.dist --colors=always"
+      "vendor/bin/phpunit --colors=always"
     ],
     "configure-phpcs": [
       "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
