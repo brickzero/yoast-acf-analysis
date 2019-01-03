@@ -256,12 +256,12 @@ class Yoast_ACF_Analysis_Configuration {
 	 */
 	public function get_field_order() {
 		/**
-		 * Filters the order of the ACF fields relative to the .
+		 * Filters the order of the ACF fields relative to the post_content.
 		 *
 		 * The array has the ACF field key as the array key and the value should be an integer
-		 * where negative values result in the field value being placed before the default post_content
+		 * where negative values result in the field value being placed before the default post_content.
 		 *
-		 * So this is how to make the field with the key "field_591eb45f2be86" being placed before
+		 * This is how to make the field with the key "field_591eb45f2be86" being placed before
 		 * the post_content:
 		 *
 		 *     $order_config = array(

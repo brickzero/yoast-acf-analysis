@@ -79,13 +79,17 @@ Collect.prototype.filterBroken = function( field_data ) {
 };
 
 Collect.prototype.sort = function( field_data ) {
-	if ( typeof config.fieldOrder === "undefined" || !config.fieldOrder ) {
+	if ( typeof config.fieldOrder === "undefined" || ! config.fieldOrder ) {
 		return field_data;
 	}
+
 	_.each( field_data, function( field ) {
-		field.order = ( typeof config.fieldOrder[ field.name ] !== "undefined" ) ? config.fieldOrder[ field.name ] : 0;
+		field.order = ( typeof config.fieldOrder[ field.name ] === "undefined" ) ? 0 : config.fieldOrder[ field.name ];
 	} );
-	return field_data.sort( function ( a, b ) { return a.order > b.order; } );
+
+	return field_data.sort( function( a, b ) {
+		return a.order > b.order;
+	} );
 };
 
 module.exports = new Collect();
