@@ -261,8 +261,7 @@ class Yoast_ACF_Analysis_Configuration {
 		 * The array has the ACF field key as the array key and the value should be an integer
 		 * where negative values result in the field value being placed before the default post_content.
 		 *
-		 * This is how to make the field with the key "field_591eb45f2be86" being placed before
-		 * the post_content:
+		 * This is how to force the field with the key "field_591eb45f2be86" to be placed before the post_content:
 		 *
 		 *     $order_config = array(
 		 *          'field_591eb45f2be86' => -1
