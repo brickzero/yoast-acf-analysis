@@ -252,7 +252,7 @@ class Yoast_ACF_Analysis_Configuration {
 	/**
 	 * Retrieves the field order.
 	 *
-	 * @return array The field order configuration
+	 * @return array The field order configuration.
 	 */
 	public function get_field_order() {
 		/**
