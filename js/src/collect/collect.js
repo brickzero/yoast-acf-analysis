@@ -84,7 +84,7 @@ Collect.prototype.sort = function( field_data ) {
 	}
 
 	_.each( field_data, function( field ) {
-		field.order = ( typeof config.fieldOrder[ field.name ] === "undefined" ) ? 0 : config.fieldOrder[ field.name ];
+		field.order = ( typeof config.fieldOrder[ field.key ] === "undefined" ) ? 0 : config.fieldOrder[ field.key ];
 	} );
 
 	return field_data.sort( function( a, b ) {
