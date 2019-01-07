@@ -53,6 +53,7 @@ class Configuration_Test extends \PHPUnit_Framework_TestCase {
 				'blacklistType'  => [],
 				'blacklistName'  => [],
 				'fieldSelectors' => [],
+				'fieldOrder'     => [],
 				'debug'          => false,
 			],
 			$configuration->to_array()
