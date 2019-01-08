@@ -61,11 +61,11 @@ Released January 22th, 2019
 
 Bugfixes:
 
-* Fixes a bug where textarea and non-headline text content would not be wrapped in paragraphs for the analysis.
+* Fixes a bug where textarea and non-headline text content would not be wrapped in paragraphs for the analysis. Props [skaeser](https://github.com/skaeser).
 
 Enhancements:
 
- * Introduces the 'yoast-acf-analysis/field_order' filter which allows for adjusting the ACF field order. This also adds the possibility to prepend field content to WordPress' post_content using a negative field order.
+ * Introduces the 'yoast-acf-analysis/field_order' filter which allows for adjusting the ACF field order. This also adds the possibility to prepend field content to WordPress' post_content using a negative field order. Props [skaeser](https://github.com/skaeser).
 
 = 2.1.0 =
 
