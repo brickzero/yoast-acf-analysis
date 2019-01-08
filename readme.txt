@@ -59,9 +59,13 @@ Previously called Yoast ACF Analysis.
 
 Released January 22th, 2019
 
+Bugfixes:
+
+* Fixes a bug where textarea and non-headline text content would not be wrapped in paragraphs for the analysis.
+
 Enhancements:
 
- * Fixes a bug where attempting to get the ACF version, wouldn't always be reliable. This would lead the plugin to think that a newer version was installed than what was actually present.
+ * Introduces the 'yoast-acf-analysis/field_order' filter which allows for adjusting the ACF field order. This also adds the possibility to prepend field content to WordPress' post_content using a negative field order.
 
 = 2.1.0 =
 
