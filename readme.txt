@@ -1,8 +1,8 @@
 === ACF Content Analysis for Yoast SEO ===
 Contributors: yoast, angrycreative, kraftner, marcusforsberg, viktorfroberg, joostdevalk, atimmer, jipmoors, theorboman
 Tags: Yoast, SEO, ACF, Advanced Custom Fields, analysis, Search Engine Optimization
-Requires at least: 4.8
-Tested up to: 4.9.7
+Requires at least: 4.9
+Tested up to: 5.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Stable tag: 2.2.0
@@ -57,7 +57,7 @@ Previously called Yoast ACF Analysis.
 
 = 2.2.0 =
 
-Released January 22th, 2019
+Released January 22nd, 2019
 
 Bugfixes:
 
