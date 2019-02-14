@@ -9,3 +9,4 @@ nightwatch.conf.js
 
 phpcs.xml
 .phpcs.xml
+phpunit.xml
