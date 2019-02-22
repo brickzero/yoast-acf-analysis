@@ -22,7 +22,7 @@ matrix:
   fast_finish: true
   include:
     - php: 7.3
-      env: WP_VERSION=5.0 WP_MULTISITE=1 PHPCS=1 CHECKJS=1 PHPUNIT=1 TRAVIS_NODE_VERSION=node
+      env: WP_VERSION=5.0 WP_MULTISITE=1 PHPCS=1 CHECKJS=1 PHPUNIT=1 SECURITY=1 TRAVIS_NODE_VERSION=node
     - php: 5.2
       dist: precise
     - php: 5.3
@@ -40,6 +40,7 @@ matrix:
     - env: WP_VERSION=master
 
 before_install:
+- export SECURITYCHECK_DIR=/tmp/security-checker
 - if [[ "$CHECKJS" == "1" ]]; then nvm install $TRAVIS_NODE_VERSION; fi
 - if [[ "$CHECKJS" == "1" ]]; then curl -o- -L https://yarnpkg.com/install.sh | bash; fi
 - if [[ "$CHECKJS" == "1" ]]; then export PATH=$HOME/.yarn/bin:$PATH; fi
@@ -48,6 +49,7 @@ install:
 - if [[ "$PHPUNIT" == "1" ]]; then composer install --no-interaction; fi
 - if [[ "$CHECKJS" == "1" ]]; then yarn global add grunt-cli; fi
 - if [[ "$CHECKJS" == "1" ]]; then yarn install; fi
+- if [[ "$SECURITY" == "1" ]]; then wget -P $SECURITYCHECK_DIR https://get.sensiolabs.org/security-checker.phar && chmod +x $SECURITYCHECK_DIR/security-checker.phar;fi
 
 before_script:
 - |
@@ -76,3 +78,5 @@ script:
 - if [[ "$CHECKJS" == "1" ]]; then grunt check; fi
 - if [[ "$PHPUNIT" == "1" ]]; then composer test; fi
 - if [[ $TRAVIS_PHP_VERSION == "5.3" || $TRAVIS_PHP_VERSION == "7.3" ]]; then composer validate --no-check-all; fi
+# Check for known security vulnerabilities in the currently locked-in dependencies.
+- if [[ "$SECURITY" == "1" ]]; then php $SECURITYCHECK_DIR/security-checker.phar -n security:check $(pwd)/composer.lock;fi
