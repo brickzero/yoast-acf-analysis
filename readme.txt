@@ -55,6 +55,14 @@ Previously called Yoast ACF Analysis.
 
 == Changelog ==
 
+= 2.3.0 =
+
+Released May 14th, 2019
+
+Enhancements:
+
+* ACF URL fields are nou analyzed as links. Props to [t49tran](https://github.com/t49tran).
+
 = 2.2.0 =
 
 Released January 22nd, 2019
