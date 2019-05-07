@@ -9,7 +9,7 @@ use Yoast\AcfAnalysis\Tests\Doubles\Passing_Dependency;
 use Yoast\AcfAnalysis\Tests\Doubles\Failing_Dependency;
 
 /**
- * Class Requirements_Test
+ * Class Requirements_Test.
  */
 class Requirements_Test extends \PHPUnit_Framework_TestCase {
 

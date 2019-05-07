@@ -5,7 +5,7 @@ namespace Yoast\AcfAnalysis\Tests\Dependencies;
 use Brain\Monkey;
 
 /**
- * Class Yoast_SEO_Dependency_Test*
+ * Class Yoast_SEO_Dependency_Test.
  */
 class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
 
