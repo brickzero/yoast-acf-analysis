@@ -4,11 +4,12 @@ namespace Yoast\AcfAnalysis\Tests\Assets;
 
 use Brain\Monkey;
 use Brain\Monkey\Functions;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class Assets_Test
  */
-class Assets_Test extends \PHPUnit_Framework_TestCase {
+class Assets_Test extends TestCase {
 
 	/**
 	 * Whether or not to preserve the global state.

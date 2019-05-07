@@ -5,13 +5,14 @@ namespace Yoast\AcfAnalysis\Tests\Configuration;
 use Brain\Monkey;
 use Brain\Monkey\Functions;
 use Brain\Monkey\Filters;
+use PHPUnit\Framework\TestCase;
 use Yoast\AcfAnalysis\Tests\Doubles\Passing_Dependency;
 use Yoast\AcfAnalysis\Tests\Doubles\Failing_Dependency;
 
 /**
  * Class Requirements_Test
  */
-class Requirements_Test extends \PHPUnit_Framework_TestCase {
+class Requirements_Test extends TestCase {
 
 	/**
 	 * Sets up test fixtures.
