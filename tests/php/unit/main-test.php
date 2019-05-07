@@ -42,7 +42,9 @@ class Main_Test extends \PHPUnit_Framework_TestCase {
 		$testee = new \AC_Yoast_SEO_ACF_Content_Analysis();
 		$testee->boot();
 
-		$this->assertNotSame( 'Invalid Config', $registry->get( 'config' ) );
-		$this->assertInstanceOf( \Yoast_ACF_Analysis_Configuration::class, $registry->get( 'config' ) );
+		$result = $registry->get( 'config' );
+
+		$this->assertNotSame( 'Invalid Config', $result );
+		$this->assertInstanceOf( \Yoast_ACF_Analysis_Configuration::class, $result );
 	}
 }
