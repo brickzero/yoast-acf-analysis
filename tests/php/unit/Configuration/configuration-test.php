@@ -7,7 +7,7 @@ use Brain\Monkey\Filters;
 use Brain\Monkey\Functions;
 
 /**
- * Class Configuration_Test
+ * Class Configuration_Test.
  */
 class Configuration_Test extends \PHPUnit_Framework_TestCase {
 

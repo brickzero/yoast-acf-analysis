@@ -5,7 +5,7 @@ namespace Yoast\AcfAnalysis\Tests;
 use Brain\Monkey;
 
 /**
- * Class Main_Test
+ * Class Main_Test.
  */
 class Main_Test extends \PHPUnit_Framework_TestCase {
 

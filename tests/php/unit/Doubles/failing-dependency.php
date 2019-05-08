@@ -3,7 +3,7 @@
 namespace Yoast\AcfAnalysis\Tests\Doubles;
 
 /**
- * Class Failing_Dependency
+ * Class Failing_Dependency.
  */
 class Failing_Dependency implements \Yoast_ACF_Analysis_Dependency {
 

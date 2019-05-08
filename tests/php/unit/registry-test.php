@@ -3,7 +3,7 @@
 namespace Yoast\AcfAnalysis\Tests\Configuration;
 
 /**
- * Class Registry_Test
+ * Class Registry_Test.
  */
 class Registry_Test extends \PHPUnit_Framework_TestCase {
 

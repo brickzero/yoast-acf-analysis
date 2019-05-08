@@ -6,7 +6,7 @@ use Brain\Monkey;
 use Brain\Monkey\Functions;
 
 /**
- * Class Assets_Test
+ * Class Assets_Test.
  */
 class Assets_Test extends \PHPUnit_Framework_TestCase {
 
