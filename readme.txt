@@ -57,7 +57,7 @@ Previously called Yoast ACF Analysis.
 
 = 2.3.0 =
 
-Released May 14th, 2019
+Released May 15th, 2019
 
 Enhancements:
 
