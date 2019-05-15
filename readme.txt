@@ -61,7 +61,7 @@ Released May 15th, 2019
 
 Enhancements:
 
-* ACF URL fields are nou analyzed as links. Props to [t49tran](https://github.com/t49tran).
+* ACF URL fields are now analyzed as links. Props to [t49tran](https://github.com/t49tran).
 
 = 2.2.0 =
 
