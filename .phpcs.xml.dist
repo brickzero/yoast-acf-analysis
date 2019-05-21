@@ -107,4 +107,19 @@
 		</properties>
 	</rule>
 
+
+	<!--
+	#############################################################################
+	TEMPORARY ADJUSTMENTS
+	Adjustments which should be removed once the associated issue has been resolved.
+	#############################################################################
+	-->
+
+	<!-- Namespaced test classes imported via a use statement are not yet correctly excluded
+		 by WPCS. This will most likely be fixed once PHPCS 3.5.0 has been released and
+		 WPCS has upgraded to that version. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound">
+		<exclude-pattern>/tests/php/unit/Dependencies/yoast-seo-dependency-test\.php$</exclude-pattern>
+	</rule>
+
 </ruleset>

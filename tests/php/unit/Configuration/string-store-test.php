@@ -2,10 +2,12 @@
 
 namespace Yoast\AcfAnalysis\Tests\Configuration;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Class String_Store_Test.
  */
-class String_Store_Test extends \PHPUnit_Framework_TestCase {
+class String_Store_Test extends TestCase {
 
 	/**
 	 * Gets the blacklist string store.

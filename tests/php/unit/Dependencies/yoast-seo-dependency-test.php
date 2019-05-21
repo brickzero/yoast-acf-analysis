@@ -3,11 +3,12 @@
 namespace Yoast\AcfAnalysis\Tests\Dependencies;
 
 use Brain\Monkey;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class Yoast_SEO_Dependency_Test.
  */
-class Yoast_SEO_Dependency_Test extends \PHPUnit_Framework_TestCase {
+class Yoast_SEO_Dependency_Test extends TestCase {
 
 	/**
 	 * Whether or not to preserve the global state.

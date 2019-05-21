@@ -3,11 +3,12 @@
 namespace Yoast\AcfAnalysis\Tests;
 
 use Brain\Monkey;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class Main_Test.
  */
-class Main_Test extends \PHPUnit_Framework_TestCase {
+class Main_Test extends TestCase {
 
 	/**
 	 * Sets up test fixtures.

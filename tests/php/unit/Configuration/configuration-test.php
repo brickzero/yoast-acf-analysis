@@ -5,11 +5,12 @@ namespace Yoast\AcfAnalysis\Tests\Configuration;
 use Brain\Monkey;
 use Brain\Monkey\Filters;
 use Brain\Monkey\Functions;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class Configuration_Test.
  */
-class Configuration_Test extends \PHPUnit_Framework_TestCase {
+class Configuration_Test extends TestCase {
 
 	/**
 	 * Sets up test fixtures.

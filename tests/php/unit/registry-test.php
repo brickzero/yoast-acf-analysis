@@ -2,10 +2,12 @@
 
 namespace Yoast\AcfAnalysis\Tests\Configuration;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Class Registry_Test.
  */
-class Registry_Test extends \PHPUnit_Framework_TestCase {
+class Registry_Test extends TestCase {
 
 	/**
 	 * Tests that the singleton instance is properly set and that every call to the registry, is the same instance.
