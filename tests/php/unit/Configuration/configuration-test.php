@@ -60,7 +60,7 @@ class Configuration_Test extends TestCase {
 			$configuration->to_array()
 		);
 
-		$this->assertEquals( Filters\applied( 'acf/get_info' ), 1 );
+		$this->assertSame( Filters\applied( 'acf/get_info' ), 1 );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class Configuration_Test extends TestCase {
 		);
 		$config        = $configuration->to_array();
 
-		$this->assertEquals( $acf_version, $config['acfVersion'] );
+		$this->assertSame( $acf_version, $config['acfVersion'] );
 	}
 
 	/**

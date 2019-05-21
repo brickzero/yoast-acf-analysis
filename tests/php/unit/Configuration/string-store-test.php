@@ -24,8 +24,11 @@ class String_Store_Test extends TestCase {
 	 * @return void
 	 */
 	public function testEmpty() {
-		$store = $this->getStore();
-		$this->assertEmpty( $store->to_array() );
+		$store  = $this->getStore();
+		$result = $store->to_array();
+
+		$this->assertInternalType( 'array', $result );
+		$this->assertEmpty( $result );
 	}
 
 	/**
@@ -103,7 +106,11 @@ class String_Store_Test extends TestCase {
 		$store = $this->getStore();
 
 		$this->assertFalse( $store->add( 999 ) );
-		$this->assertEmpty( $store->to_array() );
+
+		$result = $store->to_array();
+
+		$this->assertInternalType( 'array', $result );
+		$this->assertEmpty( $result );
 	}
 
 	/**
@@ -129,7 +136,10 @@ class String_Store_Test extends TestCase {
 
 		$store->remove( $type_b );
 
-		$this->assertEmpty( $store->to_array() );
+		$result = $store->to_array();
+
+		$this->assertInternalType( 'array', $result );
+		$this->assertEmpty( $result );
 	}
 
 	/**
