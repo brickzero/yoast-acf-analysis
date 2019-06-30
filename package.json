@@ -40,7 +40,7 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-yoast": "^1.0.1",
     "grunt": "^1.0.1",
-    "grunt-eslint": "^20.1.0",
+    "grunt-eslint": "^22.0.0",
     "load-grunt-config": "^0.19.2",
     "nightwatch": "^0.9.15",
     "ps-tree": "^1.1.0",
