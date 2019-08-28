@@ -474,7 +474,8 @@ var scraperObjects = {
 
 	// Third-party / jQuery
 	// TODO: google_map, date_picker, color_picker
-
+    component_title: require( "./scraper/scraper.taxonomy.js" ),
+    component_text: require( "./scraper/scraper.taxonomy.js" ),
 };
 
 var scrapers = {};
@@ -881,7 +882,7 @@ var getContentTinyMCE = function( field ) {
 
 Scraper.prototype.scrape = function( fields ) {
 	fields = _.map( fields, function( field ) {
-		if ( field.type !== "wysiwyg" ) {
+		if ( field.type !== "wysiwyg" && field.type !== "component_title" && field.type !== "component_text") {
 			return field;
 		}
 

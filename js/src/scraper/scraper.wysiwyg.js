@@ -42,8 +42,8 @@ var getContentTinyMCE = function( field ) {
 
 Scraper.prototype.scrape = function( fields ) {
 	fields = _.map( fields, function( field ) {
-		if ( field.type !== "wysiwyg" ) {
-			return field;
+        if ( field.type !== "wysiwyg" && field.type !== "component_title" && field.type !== "component_text") {
+            return field;
 		}
 
 		field.content = getContentTinyMCE( field );

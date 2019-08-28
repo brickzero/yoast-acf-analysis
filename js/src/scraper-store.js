@@ -22,7 +22,8 @@ var scraperObjects = {
 
 	// Third-party / jQuery
 	// TODO: google_map, date_picker, color_picker
-
+    component_title: require( "./scraper/scraper.taxonomy.js" ),
+    component_text: require( "./scraper/scraper.taxonomy.js" ),
 };
 
 var scrapers = {};
